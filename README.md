@@ -50,10 +50,10 @@ However, there are no functions for AIC, BIC, Mallow's $C_p$ and table output. T
 
 ## **Timeline**
 
-- *Phase I*: 02/05/2018 - 03/11/2018: develop functions to compute AIC, BIC, Mallow's $C_p$ and table output that include all scores for model comparison.
-- ** *Phase II*: From late March: develop other functions to finish the package.
+**Phase I**: 02/05/2018 - 03/11/2018, develop functions to compute AIC, BIC, Mallow's $C_p$ and table output that include all scores for model comparison.
+- ** **Phase II**: From late March, develop other functions to finish the package.
 
-* ** Tentative, and will be updated later*
+* ** Tentative, and will be updated later
 
 ## **Function Description**
 
@@ -65,12 +65,13 @@ Here, we will describe functions in *Phase I*.
 
 AIC stands for Akaike’s Information Criterion. It estimates the quality of a model, relative to each of other models. The lower AIC score is, the better the model is. Therefore, a model with lowest AIC - in comparison to others, is chosen.
 
-$$AIC = n \times log(\frac{\sigma^2}{n}) + 2K$$
+```
+AIC = n*log(residual sum of squares/n) + 2K
+```
 
 where:
-- $n$: number of observations
-- $\sigma^2$: residual sum of squares
-- $K$: number of parameters (including intercept)
+- n: number of observations
+- K: number of parameters (including intercept)
 
 #### Function
 
@@ -84,12 +85,13 @@ aic(x, y, n, k, model)
 
 BIC stands for Bayesian Information Criterion. Like AIC, it also estimates the quality of a model. When fitting models, it is possible to increase model fitness by adding more parameters. Doing this may results in model overfit. Both AIC and BIC helps to resolve this problem by using a penalty term for the number of parameters in the model. This term is bigger in BIC than in AIC.
 
-$$BIC = n \times log(\frac{\sigma^2}{n}) + K \times log(n)$$
+```
+BIC = n*log(residual sum of squares/n) + K*log(n)
+```
 
 where:
-- $n$: number of observations
-- $\sigma^2$: residual sum of squares
-- $K$: number of parameters (including intercept)
+- n: number of observations
+- K: number of parameters (including intercept)
 
 #### Function
 

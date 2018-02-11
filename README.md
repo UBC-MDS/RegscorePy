@@ -141,9 +141,47 @@ bic(x, y, n, k, model = 'linear')
 
 #### Introduction
 
+```
+C_p = (SSE_p/MSE) - (n - 2p)
+```
 
+where:
+- SSE_k: residual sum of squares for the subset model containing `p` explanatory
+variables counting the intercept.
+- MSE: mean squared error for the full model (model containing all `k` explanatory variables of interest)
+- n: number of observations
+- p: number of subset explanatory variables
 
 #### Function
+
+```
+mallow(X, x_subset, y, n, p, k, model = 'linear')
+```
+
+**Parameters:**
+* **X**: ndarray or scipy.sparse matrix, (n_samples, n_features)
+  * Predictive variable(s)
+
+* **x_subset**: ndarray or scipy.sparse matrix, (n_samples, n_features)
+  * Predictive variable(s) in the subset model
+
+* **y**: ndarray, shape (n_samples), or (n_samples, n_targets)
+  * Target variable(s)
+
+* **n**: int
+  * Number of observations
+
+* **p**: int
+  * Number of predictive variable(s) used in the subset model
+
+* **k**: int
+  * Number of predictive variable(s) used in the model
+
+* **model**: default 'linear' | 'logistic' | 'ridge' | 'lasso' | 'elasticnet'
+  * Method applied to the model
+
+**Return:**
+* Mallow's C_p score of the subset model: int
 
 
 ### Table of comparison

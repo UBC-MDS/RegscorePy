@@ -57,7 +57,7 @@ However, there are no functions for AIC, BIC, Mallow's $C_p$ and table output. T
 
 ## **Function Description**
 
-Here, we will describe functions in *Phase I*.
+Here, we will describe functions in *Phase I*. We will also add a documentation for all functions later.
 
 ### AIC
 
@@ -142,6 +142,7 @@ bic(x, y, n, k, model = 'linear')
 #### Introduction
 
 
+
 #### Function
 
 
@@ -150,25 +151,17 @@ bic(x, y, n, k, model = 'linear')
 #### Function
 
 ```
-comparison_model(model1, model2,...)
+comparison_model(model)
 ```
 
-**Input**
+**Parameters:**
+* **model**: str
+  * Models to compare, separate by `,`
 
-
-**Output**
-
-A table with model names and their scores. Demo:
+**Return:**
+* A table with model names and their scores. Demo:
 
 | Model  | AIC | BIC | Mallow's C_p |
 |--------|-----|-----|--------------|
 | Model1 | 123 | 145 | 156          |
 | Model2 | 145 | 134 | 167          |
-
-Mallow’s C_p
-
-
-
-R ecosystem:
-`finish_glance`  function from broom package
-    https://www.rdocumentation.org/packages/broom/versions/0.4.2/topics/finish_glance

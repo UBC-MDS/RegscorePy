@@ -1,15 +1,15 @@
-#Contributing
+# Contributing
 
 Persons contributing to this project agree to the [code of conduct](./CONDUCT.md) and agree to the potential redistribution of their code under our license.
 
-##Contributor Agreement: 
+## Contributor Agreement: 
 
-###Task:
+### Task:
 - Ha @hadinh1306 : AIC + Table output
 - Simran @simrnsethi : BIC
 - Stephanie @rq1995 : Mallow’s 
 
-###Communication:
+### Communication:
 - Responsive on Slack , especially during Friday and Saturday. 
 - 10-minute stand-up meeting on Monday during lunch break, to talk about weekly plan.
 
@@ -20,7 +20,7 @@ Persons contributing to this project agree to the [code of conduct](./CONDUCT.md
 - Write tests.
 - Write a good commit message.
 
-##Where to Contribute(Workflow)
+## Where to Contribute(Workflow)
 
 #### Using GitHub
 1.  We can use GitHub flow (branch) to manage changes:
@@ -28,24 +28,24 @@ Persons contributing to this project agree to the [code of conduct](./CONDUCT.md
    - Commit the change in that branch.
    - Submit a pull request from that branch to the master repository.
    - If you receive feedback, make changes on your desktop and push to your branch on GitHub: the pull request will update automatically.
-   - **If a major change is made by any person, tag other two. If this change is approved by all → accept pull request.
+   - **If a major change is made by any person, tag other two. If this change is approved by all → accept pull request.**
 
 2.   We also use GitHub flow (fork) to manage changes:
    - Fork, then clone this repo
    - Push that branch to your fork of this repository on GitHub.
    - Submit a pull request
    - If you receive feedback, make changes on your desktop and push to your branch on GitHub: the pull request will update automatically.
-   - **If a major change is made by any person, tag other two. If this change is approved by all → accept pull request.
+   - **If a major change is made by any person, tag other two. If this change is approved by all → accept pull request.**
 
-##How to Contribute
+## How to Contribute
 
-####Code comment 
+#### Code comment 
 - Functions need to be documented clearly.
 
-####Commit message
+#### Commit message
 - Big changes:
   
-  ```
+```
 $ git commit -m "A brief summary of the commit
 > 
 > A paragraph describing what changed and its impact."
@@ -57,10 +57,10 @@ $ git commit -m "A brief summary of the commit
 - Frequent commit everytime you make changes.
 
 
-####Testing conventions
+#### Testing conventions
 - We will add details later.
 
-####Coding convention
+#### Coding convention
 - Python:
 
       - All code should in `.py` file rather than jupyter notebook file

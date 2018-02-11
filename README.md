@@ -11,7 +11,7 @@ A project by:
 
 ### Problem
 
-Currently, in both Python and R ecosystems, there is no single package that provides easy calculation for AIC, BIC, Mallow's $C_p$, and a united table summary of scores for all models that users can refer to to compare and choose the best model. This leads to manual mathematical calculation, lengthy codes or usage of several packages to obtain one task, which is inefficient.
+Currently, in both Python and R ecosystems, there is no single package that provides easy calculation for AIC, BIC, Mallow's C_p, and a united table summary of scores for all models that users can refer to to compare and choose the best model. This leads to manual mathematical calculation, lengthy codes or usage of several packages to obtain one task, which is inefficient.
 
 ### Solution
 
@@ -46,12 +46,13 @@ metrics.median_absolute_error(y_true, y_pred)
 metrics.r2_score(y_true, y_pred[, …])
 ```
 
-However, there are no functions for AIC, BIC, Mallow's $C_p$ and table output. Thus, our package can be a united source for all popular regression model comparison metrics.
+However, there are no functions for AIC, BIC, Mallow's C_p and table output. Thus, our package can be a united source for all popular regression model comparison metrics.
 
 ## **Timeline**
 
 **Phase I**: 02/05/2018 - 03/11/2018, develop functions to compute AIC, BIC, Mallow's $C_p$ and table output that include all scores for model comparison.
-- ** **Phase II**: From late March, develop other functions to finish the package.
+
+** **Phase II**: From late March, develop other functions to finish the package.
 
 * ** Tentative, and will be updated later
 
@@ -141,7 +142,7 @@ bic(x, y, n, k, model = 'linear')
 
 #### Introduction
 
-Mallow's C_p is named for Colin Lingwood Mallows. It is used to assess the fit of regression model, finding the best model involving a subset of predictive variables available for predicting some outcome. 
+Mallow's C_p is named for Colin Lingwood Mallows. It is used to assess the fit of regression model, finding the best model involving a subset of predictive variables available for predicting some outcome.
 
 ```
 C_p = (SSE_p/MSE) - (n - 2p)

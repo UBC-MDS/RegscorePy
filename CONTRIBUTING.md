@@ -1,6 +1,6 @@
 # Contributing
 
-Persons contributing to this project agree to the [code of conduct](./CONDUCT.md) and agree to the potential redistribution of their code under our license.
+Persons contributing to this project agree to the [code of conduct](./CODE_OF_CONDUCT.md) and agree to the potential redistribution of their code under our license.
 
 ## Contributor Agreement: 
 
@@ -16,8 +16,8 @@ Each group member is responsible to be:
 - 10-minute stand-up meeting on Monday during lunch break, to talk about weekly plan.
 
 ### Contribute to the project
-- For small changes, create Branch is ok. Guidelines below.
-- For big changes, please use Folk. Guidelines below.
+- For small changes, create Branch is ok. Please follow the tips about commit message below (In **How to contribute** part.)
+- For big changes, please use Folk. Please follow the tips about commit message below (In **How to contribute** part.).
 - Commit frequently with clear and concise commit message.
 - Write tests for function changes.
 - Once your changes are done, submit a Pull Request.
@@ -28,14 +28,15 @@ Each group member is responsible to be:
 
 #### Using GitHub
 1.  We can use GitHub flow (branch) to manage changes:
-   - Create a new branch in your desktop copy of this repository for each significant change.
-   - Commit the change in that branch.
+   - Clone this repo. Create a new branch in your desktop copy of this repository for each significant change.
+   - Commit the change in that branch[(about branch)](https://help.github.com/articles/about-branches/).
    - Submit a pull request from that branch to the master repository.
    - If you receive feedback, make changes on your desktop and push to your branch on GitHub: the pull request will update automatically.
    - **If a major change is made by any person, tag other two. If this change is approved by all → accept pull request.
 
 2.   We also use GitHub flow (fork) to manage changes:
-   - Fork, then clone this repo
+   - Fork [(How to fork)](https://help.github.com/articles/working-with-forks/)
+, then clone this repo. 
    - Push that branch to your fork of this repository on GitHub.
    - Submit a pull request
    - If you receive feedback, make changes on your desktop and push to your branch on GitHub: the pull request will update automatically.
@@ -50,13 +51,17 @@ Each group member is responsible to be:
 - Big changes:
   
   ```
-$ git commit -m "A brief summary of the commit
-> 
-> A paragraph describing what changed and its impact."
+ git commit -m "A brief summary of the commit
+
+ A paragraph describing what changed and its impact."
 ```
 
 -  Small changes:
    - 1-line detailed message including what change you made.
+
+   ```
+git commit -m "Concise summary of what you did here"
+```
 
 - Frequent commit everytime you make changes.
 

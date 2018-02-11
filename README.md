@@ -90,7 +90,7 @@ aic(x, y, n, k, model = 'linear')
   * Number of observations
 
 * **k**: int
-  * Number of target variable(s) used in the model
+  * Number of predictive variable(s) used in the model
 
 * **model**: default 'linear' | 'logistic' | 'ridge' | 'lasso' | 'elasticnet'
   * Method applied to the model
@@ -129,7 +129,7 @@ bic(x, y, n, k, model = 'linear')
   * Number of observations
 
 * **k**: int
-  * Number of target variable(s) used in the model
+  * Number of predictive variable(s) used in the model
 
 * **model**: default 'linear' | 'logistic' | 'ridge' | 'lasso' | 'elasticnet'
   * Method applied to the model

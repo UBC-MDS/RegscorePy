@@ -76,8 +76,28 @@ where:
 #### Function
 
 ```
-aic(x, y, n, k, model)
+aic(x, y, n, k, model = 'linear')
 ```
+
+**Parameters:**
+* **x**: ndarray or scipy.sparse matrix, (n_samples, n_features)
+  * Predictive variable(s)
+
+* **y**: ndarray, shape (n_samples), or (n_samples, n_targets)
+  * Target variable(s)
+
+* **n**: int
+  * Number of observations
+
+* **k**: int
+  * Number of target variable(s) used in the model
+
+* **model**: default 'linear' | 'logistic' | 'ridge' | 'lasso' | 'elasticnet'
+  * Method applied to the model
+
+**Return:**
+* AIC score of the model: int
+
 
 ### BIC
 
@@ -96,6 +116,7 @@ where:
 #### Function
 
 ```
+
 ```
 
 ### Mallow's $C_p$

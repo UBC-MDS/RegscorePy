@@ -137,9 +137,11 @@ bic(x, y, n, k, model = 'linear')
 **Return:**
 * BIC score of the model: int
 
-### Mallow's $C_p$
+### Mallow's C_p
 
 #### Introduction
+
+Mallow's C_p is named for Colin Lingwood Mallows. It is used to assess the fit of regression model, finding the best model involving a subset of predictive variables available for predicting some outcome. 
 
 ```
 C_p = (SSE_p/MSE) - (n - 2p)

@@ -79,6 +79,5 @@ git commit -m "Concise summary of what you did here"
       - All code should be in `.R` file rather than `.Rmd` or R notebook.
 
 
-
-
-
+## Attribution
+This document was adapted from [here](https://github.com/swcarpentry/r-novice-inflammation/blob/gh-pages/CONTRIBUTING.md).

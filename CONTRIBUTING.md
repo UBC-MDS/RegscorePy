@@ -32,7 +32,7 @@ Each group member is responsible to be:
    - Commit the change in that branch[(about branch)](https://help.github.com/articles/about-branches/).
    - Submit a pull request from that branch to the master repository.
    - If you receive feedback, make changes on your desktop and push to your branch on GitHub: the pull request will update automatically.
-   - **If a major change is made by any person, tag other two. If this change is approved by all → accept pull request.
+   - **If a major change is made by any person, tag other two. If this change is approved by all → accept pull request.**
 
 2.   We also use GitHub flow (fork) to manage changes:
    - Fork [(How to fork)](https://help.github.com/articles/working-with-forks/)
@@ -40,7 +40,7 @@ Each group member is responsible to be:
    - Push that branch to your fork of this repository on GitHub.
    - Submit a pull request
    - If you receive feedback, make changes on your desktop and push to your branch on GitHub: the pull request will update automatically.
-   - **If a major change is made by any person, tag other two. If this change is approved by all → accept pull request.
+   - **If a major change is made by any person, tag other two. If this change is approved by all → accept pull request.**
 
 ## How to Contribute
 
@@ -50,7 +50,7 @@ Each group member is responsible to be:
 #### Commit message
 - Big changes:
   
-  ```
+```
  git commit -m "A brief summary of the commit
 
  A paragraph describing what changed and its impact."
@@ -59,7 +59,7 @@ Each group member is responsible to be:
 -  Small changes:
    - 1-line detailed message including what change you made.
 
-   ```
+ ```
 git commit -m "Concise summary of what you did here"
 ```
 
@@ -67,7 +67,9 @@ git commit -m "Concise summary of what you did here"
 
 
 #### Testing conventions
+
 - Details coming in 1 week.
+
 
 #### Coding convention
 - Python:

@@ -17,7 +17,7 @@ Each group member is responsible to be:
 
 ### Contribute to the project
 - For small changes, create Branch is ok. Please follow the tips about commit message below (In **How to contribute** part.)
-- For big changes, please use Folk. Please follow the tips about commit message below (In **How to contribute** part.).
+- For big changes, please use Fork. Please follow the tips about commit message below (In **How to contribute** part.).
 - Commit frequently with clear and concise commit message.
 - Write tests for function changes.
 - Once your changes are done, submit a Pull Request.

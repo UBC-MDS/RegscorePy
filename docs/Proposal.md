@@ -76,27 +76,23 @@ where:
 #### Function
 
 ```
-aic(x, y, n, k, model = 'linear')
+aic(y, y_pred, p)
 ```
 
 **Parameters:**
-* **x**: ndarray or scipy.sparse matrix, (n_samples, n_features)
-  * Predictive variable(s)
 
-* **y**: ndarray, shape (n_samples), or (n_samples, n_targets)
-  * Target variable(s)
+* **y**: array-like of shape = (n_samples) or (n_samples, n_outputs)
+  * True target variable(s)
 
-* **n**: int
-  * Number of observations
+* **y_pred**: array-like of shape = (n_samples) or (n_samples, n_outputs)
+  * Fitted target variable(s) obtained from your regression model
 
-* **k**: int
+* **p**: int
   * Number of predictive variable(s) used in the model
 
-* **model**: default 'linear' | 'logistic' | 'ridge' | 'lasso' | 'elasticnet'
-  * Method applied to the model
-
 **Return:**
-* AIC score of the model: int
+* aic_score: int
+  * AIC score of the model
 
 
 ### BIC
@@ -116,26 +112,21 @@ where:
 #### Function
 
 ```
-bic(x, y, n, k, model = 'linear')
+bic(y, y_pred, p)
 ```
 **Parameters:**
-* **x**: ndarray or scipy.sparse matrix, (n_samples, n_features)
-  * Predictive variable(s)
+* **y**: array-like of shape = (n_samples) or (n_samples, n_outputs)
+  * True target variable(s)
 
-* **y**: ndarray, shape (n_samples), or (n_samples, n_targets)
-  * Target variable(s)
+* **y_pred**: array-like of shape = (n_samples) or (n_samples, n_outputs)
+  * Fitted target variable(s) obtained from your regression model
 
-* **n**: int
-  * Number of observations
-
-* **k**: int
+* **p**: int
   * Number of predictive variable(s) used in the model
 
-* **model**: default 'linear' | 'logistic' | 'ridge' | 'lasso' | 'elasticnet'
-  * Method applied to the model
-
 **Return:**
-* BIC score of the model: int
+* bic_score: int
+  * BIC score of the model
 
 ### Mallow's C_p
 
@@ -157,34 +148,25 @@ variables counting the intercept.
 #### Function
 
 ```
-mallow(X, x_subset, y, n, p, k, model = 'linear')
+mallow(y, y_pred, p, k)
 ```
 
 **Parameters:**
-* **X**: ndarray or scipy.sparse matrix, (n_samples, n_features)
-  * Predictive variable(s)
+* **y**: array-like of shape = (n_samples) or (n_samples, n_outputs)
+  * True target variable(s)
 
-* **x_subset**: ndarray or scipy.sparse matrix, (n_samples, n_features)
-  * Predictive variable(s) in the subset model
-
-* **y**: ndarray, shape (n_samples), or (n_samples, n_targets)
-  * Target variable(s)
-
-* **n**: int
-  * Number of observations
+* **y_pred**: array-like of shape = (n_samples) or (n_samples, n_outputs)
+  * Fitted target variable(s) obtained from your regression model
 
 * **p**: int
-  * Number of predictive variable(s) used in the subset model
-
-* **k**: int
   * Number of predictive variable(s) used in the model
 
-* **model**: default 'linear' | 'logistic' | 'ridge' | 'lasso' | 'elasticnet'
-  * Method applied to the model
+* **k**: int
+  * Number of predictive variable(s) used in the subset model
 
 **Return:**
-* Mallow's C_p score of the subset model: int
-
+* mallow_score: int
+  * Mallow's C_p score of the subset model
 
 ### Table of comparison
 

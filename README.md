@@ -1,5 +1,5 @@
 
-# regscore-py
+# RegscorePy
 
 A python package that does model comparison between different regression models.
 

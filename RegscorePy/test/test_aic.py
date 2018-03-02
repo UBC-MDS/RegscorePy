@@ -3,6 +3,20 @@ import RegscorePy
 
 ## Add code to test AIC function
 class Test_aic:
+    ## test function
+    def exp_result1():
+        """
+        test if aic() gives correct result
+        """
+        y = [1,2,3,4]
+        y_pred = [5,6,7,8]
+        p = 3
+        obs = aic(y, y_pred, p)
+        exp = 72
+        assert obs == exp, 'The AIC given y = [1,2,3,4], y_pred = [5,6,7,8], and p = 3 should be 72 (applying statistical formula in main README)'
+
+
+    ## test constrains
     def y_ypred_len():
         """
         test if y and y_pred have same length, if not yield error

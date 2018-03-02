@@ -9,3 +9,8 @@ class Test_aic:
         """
         with pytest.raises(Error):
             RegscorePy.aic([1,2,3,4],[4,5,6,7,8], 3)
+
+    def type_p():
+        """
+
+        """

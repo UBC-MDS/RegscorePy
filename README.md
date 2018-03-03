@@ -120,23 +120,3 @@ mallow(y, y_pred, y_sub, k, p)
 
 * mallow_score: int
   * Mallow's C_p score of the subset model
-
-### Table of comparison
-
-#### Function
-
-```
-comparison_model(model)
-```
-
-**Parameters:**
-* **model**: str
-  * Models to compare, separate by `,`
-
-**Return:**
-* A table with model names and their scores. Demo:
-
-| Model  | AIC | BIC | Mallow's C_p |
-|--------|-----|-----|--------------|
-| Model1 | 123 | 145 | 156          |
-| Model2 | 145 | 134 | 167          |

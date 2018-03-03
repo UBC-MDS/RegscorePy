@@ -1,5 +1,5 @@
 # model-comparison-package
-This is the repo for a python package that does model comparison between different feature selection models.
+A Python package that does model comparison between different feature selection models.
 
 A project by:
 - Ha Dinh
@@ -10,7 +10,7 @@ A project by:
 
 ### Problem
 
-Currently, in both Python and R ecosystems, there is no single package that provides easy calculation for AIC, BIC, Mallow's C_p, and a united table summary of scores for all models that users can refer to to compare and choose the best model. This leads to manual mathematical calculation, lengthy codes or usage of several packages to obtain one task, which is inefficient.
+Currently, in both Python ecosystems, there is no single package that provides easy calculation for AIC, BIC, Mallow's C_p, and a united table summary of scores for all models that users can refer to to compare and choose the best model. This leads to manual mathematical calculation, lengthy codes or usage of several packages to obtain one task, which is inefficient.
 
 ### Solution
 
@@ -49,7 +49,9 @@ However, there are no functions for AIC, BIC, Mallow's C_p and table output. Thu
 
 ## **Timeline**
 
-**Phase I**: 02/05/2018 - 03/11/2018, develop functions to compute AIC, BIC, Mallow's $C_p$ and table output that include all scores for model comparison.
+**Phase I**: 02/05/2018 - 03/11/2018, develop functions to compute AIC, BIC, Mallow's $C_p$ and ~~table output that include all scores for model comparison~~.
+
+*Though we want to include a table of comparison in the beginning for Phase I, we decided not to since it would make more sense to finish all functions for this package and design a table of comparison that hold all scores gracefully*
 
 ** **Phase II**: From late March, develop other functions to finish the package.
 
@@ -177,6 +179,8 @@ mallow(y, y_pred, y_sub, k, p)
   * Mallow's C_p score of the subset model
 
 ### Table of comparison
+
+**This function will be built in Phase II**
 
 #### Function
 

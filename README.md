@@ -96,23 +96,28 @@ variables counting the intercept.
 #### Function
 
 ```
-mallow(y, y_pred, p, k)
+mallow(y, y_pred, y_sub, k, p)
 ```
 
 **Parameters:**
+
 * **y**: array-like of shape = (n_samples) or (n_samples, n_outputs)
   * True target variable(s)
 
 * **y_pred**: array-like of shape = (n_samples) or (n_samples, n_outputs)
   * Fitted target variable(s) obtained from your regression model
 
-* **p**: int
-  * Number of predictive variable(s) used in the model
+* **y_sub**: array-like of shape = (n_samples) or (n_samples, n_outputs)
+  * Fitted target variable(s) obtained from your subset regression model
 
 * **k**: int
+  * Number of predictive variable(s) used in the model
+
+* **p**: int
   * Number of predictive variable(s) used in the subset model
 
 **Return:**
+
 * mallow_score: int
   * Mallow's C_p score of the subset model
 

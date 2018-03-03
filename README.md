@@ -100,6 +100,7 @@ mallow(y, y_pred, y_sub, k, p)
 ```
 
 **Parameters:**
+
 * **y**: array-like of shape = (n_samples) or (n_samples, n_outputs)
   * True target variable(s)
 
@@ -109,12 +110,13 @@ mallow(y, y_pred, y_sub, k, p)
 * **y_sub**: array-like of shape = (n_samples) or (n_samples, n_outputs)
   * Fitted target variable(s) obtained from your subset regression model
 
-* **p**: int
+* **k**: int
   * Number of predictive variable(s) used in the model
 
-* **k**: int
+* **p**: int
   * Number of predictive variable(s) used in the subset model
 
 **Return:**
+
 * mallow_score: int
   * Mallow's C_p score of the subset model

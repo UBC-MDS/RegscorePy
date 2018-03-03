@@ -40,6 +40,20 @@ class Test_mallow:
         with pytest.raises(TypeError):
             RegscorePy.mallow([1,2,3,4],[5,6,7,8],[5,6,7,8], 3, 2.3)
 
+    def test_positive_k(self):
+    '''
+    check if k is positive
+    '''
+        with pytest.raises(Error):
+            RegscorePy.mallow([1,2,3,4], [5,6,7,8],[5,6,7,8], -1, 3)
+
+    def test_integer_k(self):
+    '''
+    check if k is integer
+    '''
+        with pytest.raises(TypeError):
+            RegscorePy.mallow([1,2,3,4],[5,6,7,8],[5,6,7,8], 3.3, 2)
+
     def test_type_y(self):
     '''
     check if y is vector

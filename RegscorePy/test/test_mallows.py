@@ -24,7 +24,7 @@ class Test_mallow:
     check if p less than k
     '''
         with pytest.raises(Error):
-            RegscorePy.mallow([1,2,3,4], [3,5,5,3],[5,6,7,7],3,2)
+            RegscorePy.mallow([1,2,3,4], [3,5,5,3],[5,6,7,7],2,3)
 
     def test_positive_p(self):
     '''

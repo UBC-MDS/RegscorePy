@@ -119,13 +119,34 @@ class Test_aic:
 
     def type_ypred1():
         """
-        test if y_pred is a vector or array-like type, if not yield error
+        test if y_pred is a vector or array-like type including numbers, if not yield error
         """
         with pytest.raises(TypeError):
             RegscorePy.aic([1,2,3,4], [[5,0,0,0],
                                        [0,6,0,0],
                                        [0,0,7,0],
                                        [0,0,0,8]], 3)
+
+    def type_ypred2():
+        """
+        test if y_pred is a vector or array-like type including numbers, if not yield error
+        """
+        with pytest.raises(TypeError):
+            RegscorePy.aic([1,2,3,4], 5, 3)
+
+    def type_ypred3():
+        """
+        test if y_pred is a vector or array-like type including numbers, if not yield error
+        """
+        with pytest.raises(TypeError):
+            RegscorePy.aic([5,6,7,8], ["a","b","c","d"], 3)
+
+    def type_ypred4():
+        """
+        test if y_pred is a vector or array-like type including numbers, if not yield error
+        """
+        with pytest.raises(TypeError):
+            RegscorePy.aic([5,6,7,8], "a", 3)
 
     ## test type of p
     def type_p1():

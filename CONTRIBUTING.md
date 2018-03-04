@@ -21,7 +21,7 @@ Each group member is responsible to be:
 - Commit frequently with clear and concise commit message.
 - Write tests for function changes.
 - Once your changes are done, submit a Pull Request.
-- Wait for comments from team member. Then make changes from your Branch/Folk repo.
+- Wait for comments from team member. Then make changes from your Branch/Fork repo.
 - Only merge after reaching whole team agreement.
 
 ## Where to Contribute(Workflow)

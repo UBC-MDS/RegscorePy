@@ -4,6 +4,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# intellij files to exclude
+.cache/
+.idea/
+
 # C extensions
 *.so
 

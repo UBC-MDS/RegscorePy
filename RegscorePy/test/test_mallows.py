@@ -106,3 +106,17 @@ class Test_mallow:
         """
         with pytest.raises(Exception):
             mallow([1], [3], [2], 3, 2)
+
+    def test_empty_y(self):
+        """
+        check if the y is empty
+        """
+        with pytest.raises(Exception):
+            mallow([],[1,2,3,4],[5,6,7,8],3,2)
+
+    def test_empty_y_pred(self):
+        """
+        check if the y_pred is empty
+        """
+        with pytest.raises(Exception):
+            mallow([1,2,3,4],[],[5,6,7,8],3,2)

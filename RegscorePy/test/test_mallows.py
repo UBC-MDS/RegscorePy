@@ -13,9 +13,9 @@ class Test_mallow:
         y_sub = [1, 2, 3, 5]
         p = 2
         k = 3
-        obs = mallow(y, y_pred, y_sub, k, p)
+        obs = mallow.mallow(y, y_pred, y_sub, k, p)
         exp = 0.0156
-        assert obs == exp, 'The mallows Cp given y = [1,2,3,4], y_pred = [5,6,7,8], y_sub = [1,2,3,5], p = 2 and k = 3 should be 35/32 (applying statistical formula in main README)'
+        assert round(obs,4) == 0.0156, 'The mallows Cp given y = [1,2,3,4], y_pred = [5,6,7,8], y_sub = [1,2,3,5], p = 2 and k = 3 should be 35/32 (applying statistical formula in main README)'
 
     def test_result2(self):
         """
@@ -26,9 +26,9 @@ class Test_mallow:
         y_sub = [1, 0.8, 0, -3.3]
         p = 2
         k = 3
-        obs = mallow(y, y_pred, y_sub, k, p)
+        obs = mallow.mallow(y, y_pred, y_sub, k, p)
         exp = 4.68
-        assert obs == exp
+        assert round(obs,2) == exp
 
     def test_k_p(self):
         """

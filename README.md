@@ -3,8 +3,14 @@
 
 A python package that does model comparison between different regression models.
 
+## Installation
 
-## **Function Description**
+```bash
+pip3 install git+https://github.com/UBC-MDS/RegscorePy.git
+```
+
+
+## **Function Description And Usage**
 
 
 ### AIC
@@ -42,6 +48,13 @@ aic(y, y_pred, p)
 * aic_score: int
   * AIC score of the model
 
+####Usage
+```
+y <-  c(1,2,3,4)
+y_pred <- c(5,6,7,8)
+p <- 3
+aic(y, y_pred, p)
+```
 
 ### BIC
 
@@ -75,6 +88,15 @@ bic(y, y_pred, p)
 **Return:**
 * bic_score: int
   * BIC score of the model
+
+####Usage
+```
+y <-  c(1,2,3,4)
+y_pred <- c(5,6,7,8)
+p <- 3
+bic(y, y_pred, p)
+```
+
 
 ### Mallow's C_p
 
@@ -120,3 +142,27 @@ mallow(y, y_pred, y_sub, k, p)
 
 * mallow_score: int
   * Mallow's C_p score of the subset model
+
+####Usage
+```
+y <-  c(1,2,3,4)
+y_pred <- c(5,6,7,8)
+y_sub <- c(1,2,3,5)
+k <- 3
+p <-2
+mallow(y, y_pred, y_sub, k, p) 
+```
+
+## How to run tests
+
+From root directory, run all test files in terminal:
+
+```
+python -m pytest
+```
+
+You also have the option to run individual test files by referencing its path. For example, if you want to test aic function, you can use the command below: 
+
+```
+python -m pytest RegscorePy/test/test_aic.py
+```

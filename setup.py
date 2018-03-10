@@ -11,5 +11,5 @@ setup(
     license = 'LICENSE',
     description = 'Useful score functions to assist regression model comparison',
     long_description = open('README.md').read(),
-    install_requires = ["will be updated"],
+    install_requires = ['numpy','pandas']
 )

@@ -190,4 +190,3 @@ class Test_aic:
         """
         with pytest.raises(Exception):
             aic([1, 2, 3, 4], [5, 6, 7, 8], 0)
-

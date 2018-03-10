@@ -1,5 +1,5 @@
 import pytest
-import RegscorePy
+from RegscorePy import aic
 
 ## Add code to test AIC function
 class Test_aic:

@@ -1,5 +1,5 @@
-from .util import aic
+from .RegscorePy import aic
 
-from .util import bic
+from .RegscorePy import bic
 
-from .util import C_p
+from .RegscorePy import mallow

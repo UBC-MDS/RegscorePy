@@ -62,6 +62,6 @@ def aic(y, y_pred, p):
     # Calculation
     resid = np.subtract(y_pred, y)
     rss = np.sum(np.power(resid, 2))
-    aic = n*np.log(rss/n) + 2*p
+    aic_score = n*np.log(rss/n) + 2*p
 
-    return aic
+    return aic_score

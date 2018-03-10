@@ -1,10 +1,14 @@
 def aic(y, y_pred, p):
     """
     Return an AIC score for a model.
+
     Input:
     y: array-like of shape = (n_samples) including values of observed y
     y_pred: vector including values of predicted y
     p: int number of predictive variable(s) used in the model
+
+    Output:
+    aic_score: int or float AIC score of the model
 
     Raise TypeError if y or y_pred are not list/tuple/dataframe column/array.
     Raise TypeError if elements in y or y_pred are not integer or float.

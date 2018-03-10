@@ -8,6 +8,9 @@ def mallow(y, y_pred, y_sub, k, p):
     k: int number of predictive variable(s) used in the model
     p: int number of predictive variable(s) used in the sub model
 
+    Output:
+    mallow_score: int or float Mallows Cp score of the model and sub model
+
     Raise Error if k is less than p.
     Raise Error if y , y_sub and y_pred are not in same length.
     Raise Error if length(y) <= 1, length(y_sub)<=1, or length(y_pred) <= 1.
@@ -19,6 +22,7 @@ def mallow(y, y_pred, y_sub, k, p):
     """
 
     import numpy as np
+    import pandas as pd
 
     if k<p:
         raise Exception("number of predictive variable(s) used in the model must larger than in subset model")
@@ -28,8 +32,13 @@ def mallow(y, y_pred, y_sub, k, p):
     if len(y)<=1 or len(y_sub)<=1 or len(y)<=1:
         raise Exception("The length of observed y, predicted y, and predicted y in subset model must be larger than 1")
 
-    if (isinstance(y,list)!=True and isinstance(y,numpy.ndarray)!=True) or (isinstance(y_sub,list)!=True and isinstance(y_sub,numpy.ndarray)!=True) or (isinstance(y_pred,list)!=True and isinstance(y_pred,numpy.ndarray)!=True):
-        raise  TypeError("The observed y, predicted y, and predicted y in subset model must be list ")
+    if isinstance(y, (np.ndarray, list, tuple, pd.core.series.Series)) == False or isinstance(y_pred, (np.ndarray, list, tuple, pd.core.series.Series)) == False:
+        raise TypeError("The observed y, predicted y, and predicted y in subset model must be array-like shape (e.g. array, list, tuple, data column)")
+    else:
+        for i in y:
+            for j in y_pred:
+                if isinstance(i, (int, float)) != True or isinstance(j, (int, float)) != True:
+                    raise TypeError("The observed y, predicted y, and predicted y in subset model must be numeric elements")
 
     if isinstance(p,int) !=True or isinstance(k,int)!=True:
         raise TypeError("The number of predictive variable(s) used in the sub model must be integer")

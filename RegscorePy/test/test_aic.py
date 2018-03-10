@@ -12,7 +12,7 @@ class Test_aic:
         y = [1, 2, 3, 4]
         y_pred = [5, 6, 7, 8]
         p = 3
-        ob = round(aic(y, y_pred, p), 3)
+        ob = round(aic.aic(y, y_pred, p), 3)
         exp = 17.09
         assert ob == exp, 'The AIC given y = [1,2,3,4], y_pred = [5,6,7,8], and p = 3 should be 17.09 (applying statistical formula in main README, and rounded to 3 decimals)'
 
@@ -23,7 +23,7 @@ class Test_aic:
         y = [-5, 1, -8, -12]
         y_pred = [-4, -6, -8, 1]
         p = 5
-        ob = round(aic(y, y_pred, p), 3)
+        ob = round(aic.aic(y, y_pred, p), 3)
         exp = 26.011
         assert ob == exp, 'The AIC given y = [-5,1,-8,-12], y_pred = [-4,-6,-8,1], and p = 5 should be 26.011 (applying statistical formula in main README, and rounded to 3 decimals)'
 
@@ -34,7 +34,7 @@ class Test_aic:
         y = [9.80, 105.23, 4.51, -65.75]
         y_pred = [9.81, 100.10, 4.51, -65.70]
         p = 10
-        ob = round(aic(y, y_pred, p), 3)
+        ob = round(aic.aic(y, y_pred, p), 3)
         exp = 27.536
         assert ob == exp, 'The AIC given y = [9.80, 105.23, 4.51, -65.75], y_pred = [9.81, 100.10, 4.51, -65.70], and p = 10 should be 27.536 (applying statistical formula in main README, and rounded to 3 decimals)'
 
@@ -45,7 +45,7 @@ class Test_aic:
         y = [0, 0, 0, -65.789]
         y_pred = [1, 0, 0.9, -64]
         p = 4
-        ob = round(aic(y, y_pred, p), 3)
+        ob = round(aic.aic(y, y_pred, p), 3)
         exp = 8.901
         assert ob == exp, 'The AIC given y = [0, 0, 0, -65.789], y_pred = [1, 0, 0.9, -64], and p = 4 should be 8.901 (applying statistical formula in main README, and rounded to 3 decimals)'
 

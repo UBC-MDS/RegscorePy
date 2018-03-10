@@ -54,35 +54,35 @@ class Test_aic:
         """
         test if y and y_pred have same length, if not yield error
         """
-        with pytest.raises(Error):
+        with pytest.raises(InputError):
             RegscorePy.aic([1,2,3,4],[4,5,6,7,8], 3)
 
     def y_len1():
         """
         test if length of y is larger than 1, if not yield error
         """
-        with pytest.raises(Error):
+        with pytest.raises(InputError):
             RegscorePy.aic([3],[5,6,7,8], 2)
 
     def y_len2():
         """
         test if length of y is larger than 1, if not yield error
         """
-        with pytest.raises(Error):
+        with pytest.raises(InputError):
             RegscorePy.aic([],[5,6,7,8], 2)
 
     def ypred_len1():
         """
         test if length of y_pred is larger than 1, if not yield error
         """
-        with pytest.raises(Error):
+        with pytest.raises(InputError):
             RegscorePy.aic([1,2,3,4],[5], 2)
 
     def ypred_len2():
         """
         test if length of y_pred is larger than 1, if not yield error
         """
-        with pytest.raises(Error):
+        with pytest.raises(InputError):
             RegscorePy.aic([1,2,3,4],[], 2)
 
     ### test type of y and y_pred
@@ -175,12 +175,12 @@ class Test_aic:
         """
         test if p is larger than 0, if not yield error
         """
-        with pytest.raises(Error):
+        with pytest.raises(InputError):
             RegscorePy.aic([1,2,3,4],[5,6,7,8], -1)
 
     def value_p2():
         """
         test if p is larger than 0, if not yield error
         """
-        with pytest.raises(Error):
+        with pytest.raises(InputError):
             RegscorePy.aic([1,2,3,4],[5,6,7,8], 0)

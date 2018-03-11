@@ -50,10 +50,11 @@ aic(y, y_pred, p)
 
 ####Usage
 ```
-y <-  c(1,2,3,4)
-y_pred <- c(5,6,7,8)
-p <- 3
-aic(y, y_pred, p)
+from RegscorePy import *
+y = [1,2,3,4]
+y_pred = [5,6,7,8]
+p = 3
+aic.aic(y, y_pred, p)
 ```
 
 ### BIC
@@ -91,10 +92,11 @@ bic(y, y_pred, p)
 
 ####Usage
 ```
-y <-  c(1,2,3,4)
-y_pred <- c(5,6,7,8)
-p <- 3
-bic(y, y_pred, p)
+from RegscorePy import *
+y = [1,2,3,4]
+y_pred = [5,6,7,8=
+p = 3
+bic.bic(y, y_pred, p)
 ```
 
 
@@ -145,12 +147,13 @@ mallow(y, y_pred, y_sub, k, p)
 
 ####Usage
 ```
-y <-  c(1,2,3,4)
-y_pred <- c(5,6,7,8)
-y_sub <- c(1,2,3,5)
-k <- 3
-p <-2
-mallow(y, y_pred, y_sub, k, p) 
+from RegscorePy import *
+y = [1,2,3,4]
+y_pred = [5,6,7,8]
+y_sub = [1,2,3,5]
+k = 3
+p = 2
+mallow.mallow(y, y_pred, y_sub, k, p) 
 ```
 
 ## How to run tests
@@ -166,3 +169,11 @@ You also have the option to run individual test files by referencing its path. F
 ```
 python -m pytest RegscorePy/test/test_aic.py
 ```
+
+## License
+[MIT](LICENSE)
+
+## Contributing
+This is an open source project. Please follow the guidelines below for contribution.
+  - Open an issue for any feedback and suggestions.
+  - For contributing to the project, please refer to [Contributing](CONTRIBUTING.md) for details.

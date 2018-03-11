@@ -15,6 +15,6 @@ V3.0, 2018/03/11 -- Third release
 In this release:
 
 * Added function definitions.
-* Added few more unit tests for aic, bic and mallows.
-* Added vignette.
+* Updated test files.
 * Added more documentation.
+

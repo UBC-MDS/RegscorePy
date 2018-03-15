@@ -61,7 +61,7 @@ aic.aic(y, y_pred, p)
 
 #### Introduction
 
-BIC stands for Bayesian Information Criterion. Like AIC, it also estimates the quality of a model. When fitting models, it is possible to increase model fitness by adding more parameters. Doing this may results in model overfit. Both AIC and BIC helps to resolve this problem by using a penalty term for the number of parameters in the model. This term is bigger in BIC than in AIC.
+BIC stands for Bayesian Information Criterion. Like AIC, it also estimates the quality of a model. When fitting models, it is possible to increase model fitness by adding more parameters. Doing this may result in model overfit. Both AIC and BIC help to resolve this problem by using a penalty term for the number of parameters in the model. This term is bigger in BIC than in AIC.
 
 ```
 BIC = n*log(residual sum of squares/n) + K*log(n)
@@ -94,7 +94,7 @@ bic(y, y_pred, p)
 ```
 from RegscorePy import *
 y = [1,2,3,4]
-y_pred = [5,6,7,8=
+y_pred = [5,6,7,8]
 p = 3
 bic.bic(y, y_pred, p)
 ```

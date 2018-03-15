@@ -48,7 +48,7 @@ aic(y, y_pred, p)
 * aic_score: int
   * AIC score of the model
 
-####Usage
+#### Usage
 ```
 from RegscorePy import *
 y = [1,2,3,4]
@@ -90,7 +90,7 @@ bic(y, y_pred, p)
 * bic_score: int
   * BIC score of the model
 
-####Usage
+#### Usage
 ```
 from RegscorePy import *
 y = [1,2,3,4]
@@ -145,7 +145,7 @@ mallow(y, y_pred, y_sub, k, p)
 * mallow_score: int
   * Mallow's C_p score of the subset model
 
-####Usage
+#### Usage
 ```
 from RegscorePy import *
 y = [1,2,3,4]

@@ -1,1 +1,13 @@
-
+language: python
+python:
+  - "3.6"
+cache: pip3
+install:
+  - 'pip install -r requirements.txt'
+script:
+  - pytest
+os: "linux"
+dist: "trusty"
+notifications:
+    on_success: never
+    on_failure: never

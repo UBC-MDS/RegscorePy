@@ -59,5 +59,5 @@ def mallow(y, y_pred, y_sub, k, p):
 
     SSE_p=np.sum((y-y_sub)**2)
     MSE= np.sum((y-y_pred)**2)/(len(y)-k)
-    mallow=SSE_p/MSE-len(y)+2*p
-    return mallow
+    mallowcp=SSE_p/MSE-len(y)+2*p
+    return mallowcp

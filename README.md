@@ -1,6 +1,9 @@
 
 # RegscorePy
 
+[![Build Status](https://travis-ci.org/UBC-MDS/RegscorePy.svg?branch=master)](https://travis-ci.org/UBC-MDS/RegscorePy)
+
+
 A python package that does model comparison between different regression models.
 
 ## Installation

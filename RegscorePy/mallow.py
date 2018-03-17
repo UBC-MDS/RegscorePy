@@ -45,7 +45,7 @@ def mallow(y, y_pred, y_sub, k, p):
         raise TypeError("The number of predictive variable(s) used in the sub model must be integer")
 
     if p<=0 or k<=0:
-        raise TypeError("The number of predictive variable(s) used in the sub model must be positive")
+        raise Exception("The number of predictive variable(s) used in the sub model must be positive")
 
 
 

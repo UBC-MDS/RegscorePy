@@ -7,7 +7,7 @@ setup(
     version = '1.0',
     author = 'Ha Dinh, Simran Sethi, Ruoqi Xu',
     author_email = 'dinhhn.ubc@gmail.com, simran.sethi@alumni.ubc.ca, rq658182@dal.ca',
-    packages = find_packages(exclude=("tests",)),
+    packages = ['RegscorePy'],
     scripts = ['RegscorePy/aic.py', 'RegscorePy/bic.py', 'RegscorePy/mallow.py'],
     url = 'https://github.com/UBC-MDS/regscore-py',
     license = 'LICENSE',

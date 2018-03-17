@@ -5,7 +5,7 @@ import pytest
 sys.path.insert(0, os.path.abspath("."))
 sys.path.insert(0, os.path.abspath("../"))
 
-from RegscorePy import mallow
+from RegscorePy.mallow import mallow
 
 
 
@@ -23,7 +23,7 @@ class Test_mallow:
         y_sub = [1, 2, 3, 5]
         p = 2
         k = 3
-        obs = mallow.mallow(y, y_pred, y_sub, k, p)
+        obs = mallow(y, y_pred, y_sub, k, p)
         exp = 0.0156
         assert round(obs,4) == 0.0156, 'The mallows Cp given y = [1,2,3,4], y_pred = [5,6,7,8], y_sub = [1,2,3,5], p = 2 and k = 3 should be 35/32 (applying statistical formula in main README)'
 
@@ -36,7 +36,7 @@ class Test_mallow:
         y_sub = [1, 0.8, 0, -3.3]
         p = 2
         k = 3
-        obs = mallow.mallow(y, y_pred, y_sub, k, p)
+        obs = mallow(y, y_pred, y_sub, k, p)
         exp = 4.68
         assert round(obs,2) == exp
 

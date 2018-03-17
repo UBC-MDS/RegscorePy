@@ -60,11 +60,8 @@ def bic(y, y_pred, p):
         n = len(y)
 
     # Score
-    # compute residual
+
     residual = np.subtract(y_pred, y)
-    # compute residual sum of square
     SSE = np.sum(np.power(residual, 2))
-    # fit number of observations, number of variables and sum of squared error in the BIC score formula
     BIC = n*np.log(SSE/n) + p*np.log(n)
-    # return score
     return BIC

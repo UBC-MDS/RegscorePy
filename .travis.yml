@@ -17,7 +17,7 @@ addons:
       - python-coverage
 script:
   - pytest
-  - py.test tests/test_aic.py --cov=RegscorePy/aic.py --cov-report=
+  - py.test tests/test_aic.py --cov=RegscorePy --cov-report=
   - coverage report -m
 #  - coverage run --source=RegscorePy/aic.py tests/test_aic.py 
 #  - coverage run --source=RegscorePy/bic.py tests/test_bic.py 

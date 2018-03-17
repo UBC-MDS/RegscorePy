@@ -4,6 +4,7 @@ python:
 cache: pip3
 install:
   - 'pip install -r requirements.txt'
+  - 'pip install --user codecov'
 script:
   - pytest
 os: "linux"
@@ -11,4 +12,5 @@ dist: "trusty"
 notifications:
     on_success: never
     on_failure: never
-
+after_success:
+  - codecov

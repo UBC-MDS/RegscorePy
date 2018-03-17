@@ -11,6 +11,4 @@ dist: "trusty"
 notifications:
     on_success: never
     on_failure: never
-after_success:
-  - codecov
-  - coveralls
+

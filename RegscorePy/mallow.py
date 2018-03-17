@@ -11,26 +11,27 @@ def mallow(y, y_pred, y_sub, k, p):
     Output:
     mallow_score: int or float Mallows Cp score of the model and sub model
 
-    Raise Error if k is less than p.
-    Raise Error if y , y_sub and y_pred are not in same length.
-    Raise Error if length(y) <= 1, length(y_sub)<=1, or length(y_pred) <= 1.
+    Raise InputError if k is less than p.
+    Raise InputError if y , y_sub and y_pred are not in same length.
+    Raise InputError if length(y) <= 1, length(y_sub)<=1, or length(y_pred) <= 1.
     Raise TypeError if y , y_sub and y_pred are not vector.
     Raise TypeError if p is not int.
-    Raise Error if p < 0.
+    Raise InputError if p < 0.
     Raise TypeError if k is not int.
-    Raise Error if k < 0.
+    Raise InputError if k < 0.
     """
 
     import numpy as np
     import pandas as pd
 
+
     if k<p:
-        raise Exception("number of predictive variable(s) used in the model must larger than in subset model")
+        raise ValueError("number of predictive variable(s) used in the model must larger than in subset model")
     if len(y)!=len(y_sub) or len(y_sub)!=len(y_pred) or len(y)!= len(y_pred):
-        raise Exception("The length of observed y, predicted y, and predicted y in subset model must be same")
+        raise ValueError("The length of observed y, predicted y, and predicted y in subset model must be same")
 
     if len(y)<=1 or len(y_sub)<=1 or len(y)<=1:
-        raise Exception("The length of observed y, predicted y, and predicted y in subset model must be larger than 1")
+        raise ValueError("The length of observed y, predicted y, and predicted y in subset model must be larger than 1")
 
     if isinstance(y, (np.ndarray, list, tuple, pd.core.series.Series)) == False or isinstance(y_pred, (np.ndarray, list, tuple, pd.core.series.Series)) == False:
         raise TypeError("The observed y, predicted y, and predicted y in subset model must be array-like shape (e.g. array, list, tuple, data column)")

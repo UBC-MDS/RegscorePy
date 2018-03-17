@@ -18,8 +18,6 @@ pip install git+https://github.com/UBC-MDS/RegscorePy.git
 
 ### AIC
 
-#### Introduction
-
 AIC stands for Akaike’s Information Criterion. It estimates the quality of a model, relative to each of other models. The lower AIC score is, the better the model is. Therefore, a model with lowest AIC - in comparison to others, is chosen.
 
 ```
@@ -51,18 +49,8 @@ aic(y, y_pred, p)
 * aic_score: int
   * AIC score of the model
 
-#### Usage
-```
-from RegscorePy import *
-y = [1,2,3,4]
-y_pred = [5,6,7,8]
-p = 3
-aic.aic(y, y_pred, p)
-```
 
 ### BIC
-
-#### Introduction
 
 BIC stands for Bayesian Information Criterion. Like AIC, it also estimates the quality of a model. When fitting models, it is possible to increase model fitness by adding more parameters. Doing this may result in model overfit. Both AIC and BIC help to resolve this problem by using a penalty term for the number of parameters in the model. This term is bigger in BIC than in AIC.
 
@@ -92,15 +80,6 @@ bic(y, y_pred, p)
 **Return:**
 * bic_score: int
   * BIC score of the model
-
-#### Usage
-```
-from RegscorePy import *
-y = [1,2,3,4]
-y_pred = [5,6,7,8]
-p = 3
-bic.bic(y, y_pred, p)
-```
 
 
 ### Mallow's C_p
@@ -148,16 +127,32 @@ mallow(y, y_pred, y_sub, k, p)
 * mallow_score: int
   * Mallow's C_p score of the subset model
 
-#### Usage
+
+## Usage
+
 ```
-from RegscorePy import *
-y = [1,2,3,4]
-y_pred = [5,6,7,8]
-y_sub = [1,2,3,5]
-k = 3
-p = 2
-mallow.mallow(y, y_pred, y_sub, k, p) 
+>> from RegscorePy import *
+>> y = [1,2,3,4]
+>> y_pred = [5,6,7,8]
+>> p = 3
+>> aic.aic(y, y_pred, p)
+17.090354888959126
+>>
+>>
+>> bic.bic(y, y_pred, p)
+15.249237972318795
+>>
+>>
+>> y_sub = [1,2,3,5]
+>> k = 3
+>> p = 2
+>> mallow.mallow(y, y_pred, y_sub, k, p) 
+>> 0.015625
+
 ```
+
+* This usage apply to python3. If you use python2, please run `from __future__ import division` before run the function.
+
 
 ## How to run tests
 

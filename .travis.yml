@@ -17,8 +17,9 @@ addons:
       - python-coverage
 script:
   - pytest
-  - py.test --cov=RegscorePy tests/ --cov-branch
+  - py.test --cov-report= --cov=RegscorePy tests/ 
   - coverage report -m 
 after_success:
   - codecov
+  -coveralls
 

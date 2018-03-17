@@ -1,6 +1,7 @@
 import os
 import sys
 import pytest
+import warnings
 
 sys.path.insert(0, os.path.abspath("."))
 sys.path.insert(0, os.path.abspath("../"))
@@ -11,6 +12,13 @@ from RegscorePy import mallow
 
 
 class Test_mallow:
+
+    class InputError(Exception):
+        """
+        Raised when there is any error from inputs that no base Python exceptions cover.
+        """
+        pass
+
 
     def test_result1(self):
         """

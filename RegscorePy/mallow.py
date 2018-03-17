@@ -23,11 +23,8 @@ def mallow(y, y_pred, y_sub, k, p):
 
     import numpy as np
     import pandas as pd
+    import wranings
 
-    class InputError(Exception):
-        """
-        Raised when there is any error from inputs that no base Python exceptions cover.
-        """
 
     if k<p:
         raise InputError("number of predictive variable(s) used in the model must larger than in subset model")

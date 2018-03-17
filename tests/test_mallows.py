@@ -12,11 +12,6 @@ from RegscorePy import mallow
 
 class Test_mallow:
 
-    class InputError(Exception):
-        """
-        Raised when there is any error from inputs that no base Python exceptions cover.
-        """
-        pass
 
 
     def test_result1(self):
@@ -49,14 +44,14 @@ class Test_mallow:
         """
         check if p less than k
         """
-        with pytest.raises(InputError):
+        with pytest.raises(ValueError):
             mallow([1, 2, 3, 4], [3, 5, 5, 3], [5, 6, 7, 7], 2, 3)
 
     def test_positive_p(self):
         """
         check if p is positive
         """
-        with pytest.raises(InputError):
+        with pytest.raises(ValueError):
             mallow([1, 2, 3, 4], [5, 6, 7, 8], [5, 6, 7, 8], 3, -1)
 
     def test_integer_p(self):
@@ -70,7 +65,7 @@ class Test_mallow:
         """
         check if k is positive
         """
-        with pytest.raises(InputError):
+        with pytest.raises(ValueError):
             mallow([1, 2, 3, 4], [5, 6, 7, 8], [5, 6, 7, 8], -1, 3)
 
     def test_integer_k(self):
@@ -119,7 +114,7 @@ class Test_mallow:
         """
         check if the length of y, y_sub, and y_pred is 1
         """
-        with pytest.raises(InputError):
+        with pytest.raises(ValueError):
             mallow([1], [3], [2], 3, 2)
 
     def test_empty_y(self):

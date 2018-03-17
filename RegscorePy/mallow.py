@@ -26,12 +26,12 @@ def mallow(y, y_pred, y_sub, k, p):
 
 
     if k<p:
-        raise InputError("number of predictive variable(s) used in the model must larger than in subset model")
+        raise ValueError("number of predictive variable(s) used in the model must larger than in subset model")
     if len(y)!=len(y_sub) or len(y_sub)!=len(y_pred) or len(y)!= len(y_pred):
-        raise InputError("The length of observed y, predicted y, and predicted y in subset model must be same")
+        raise ValueError("The length of observed y, predicted y, and predicted y in subset model must be same")
 
     if len(y)<=1 or len(y_sub)<=1 or len(y)<=1:
-        raise InputError("The length of observed y, predicted y, and predicted y in subset model must be larger than 1")
+        raise ValueError("The length of observed y, predicted y, and predicted y in subset model must be larger than 1")
 
     if isinstance(y, (np.ndarray, list, tuple, pd.core.series.Series)) == False or isinstance(y_pred, (np.ndarray, list, tuple, pd.core.series.Series)) == False:
         raise TypeError("The observed y, predicted y, and predicted y in subset model must be array-like shape (e.g. array, list, tuple, data column)")

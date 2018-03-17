@@ -1,4 +1,7 @@
 language: python
+notifications:
+    on_success: never
+    on_failure: always
 python:
   - "3.6"
 cache: pip3
@@ -7,11 +10,13 @@ install:
   - 'pip install codecov'
 script:
   - pytest
-  - coverage run --source=tests/*.py
+  - py.test tests/test_aic.py tests/test_bic.py tests/test_mallows.py --cov=codecov
 os: "linux"
 dist: "trusty"
-notifications:
-    on_success: never
-    on_failure: never
+addons:
+  apt:
+    packages:
+      - python-coverage
 after_success:
   - codecov
+

@@ -18,11 +18,9 @@ addons:
 script:
   - pytest
   - py.test tests/test_aic.py --cov=RegscorePy --cov-report=
-  - coverage report -m
-#  - coverage run --source=RegscorePy/aic.py tests/test_aic.py 
-#  - coverage run --source=RegscorePy/bic.py tests/test_bic.py 
-#  - coverage run --source=RegscorePy/mallow.py tests/test_mallows.py  
+  - py.test tests/test_bic.py --cov=RegscorePy --cov-report=
+  - py.test tests/test_mallows.py --cov=RegscorePy --cov-report=
+  - coverage report -m 
 after_success:
-  - coverage combine
   - codecov
 

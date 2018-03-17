@@ -8,7 +8,6 @@ cache: pip3
 install:
   - 'pip install -r requirements.txt'
   - 'pip install codecov'
-  - 'python setup.py install'
 os: "linux"
 dist: "trusty"
 addons:
@@ -17,9 +16,10 @@ addons:
       - python-coverage
 script:
   - pytest
-  - py.test tests/test_aic.py --cov=.RegscorePy
-  - py.test tests/test_bic.py --cov=.RegscorePy
-  - py.test tests/test_mallows.py --cov=.RegscorePy
+  - coverage run --source=tests/ test_aic.py
+  - coverage run --source=tests/ test_bic.py
+  - coverage run --source=tests/ test_mallows.py
 after_success:
+  - coverage combine
   - codecov
 

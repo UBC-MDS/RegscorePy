@@ -114,7 +114,7 @@ class Test_mallow:
         """
         check if the length of y, y_sub, and y_pred is 1
         """
-        with pytest.raises(ValueError):
+        with pytest.raises(TypeError):
             mallow([1], [3], [2], 3, 2)
 
     def test_empty_y(self):

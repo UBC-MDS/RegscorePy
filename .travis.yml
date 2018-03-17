@@ -7,7 +7,9 @@ install:
   - 'pip install codecov'
 script:
   - pytest
-  - coverage run tests/*.py
+  - coverage run --source=tests/test_aic.py
+  - coverage run --source=tests/test_bic.py
+  - coverage run --source=tests/test_mallows.py
 os: "linux"
 dist: "trusty"
 notifications:

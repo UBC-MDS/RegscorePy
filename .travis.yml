@@ -16,9 +16,9 @@ addons:
       - python-coverage
 script:
   - pytest
-  - coverage run --source=tests test_aic.py test
-  - coverage run --source=tests test_bic.py test
-  - coverage run --source=tests test_mallows.py test
+  - coverage run --source=tests/test_aic.py
+  - coverage run --source=tests/test_bic.py
+  - coverage run --source=tests/test_mallows.py
 after_success:
   - coverage combine
   - codecov

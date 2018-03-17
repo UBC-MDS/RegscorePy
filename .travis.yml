@@ -9,17 +9,17 @@ install:
   - 'pip install -r requirements.txt'
   - 'pip install codecov'
   - 'python setup.py install'
-script:
-  - pytest
-  - py.test tests/test_aic.py --cov=RegscorePy
-  - py.test tests/test_bic.py --cov=RegscorePy
-  - py.test tests/test_mallows.py --cov=RegscorePy
 os: "linux"
 dist: "trusty"
 addons:
   apt:
     packages:
       - python-coverage
+script:
+  - pytest
+  - py.test tests/test_aic.py --cov=.RegscorePy
+  - py.test tests/test_bic.py --cov=.RegscorePy
+  - py.test tests/test_mallows.py --cov=.RegscorePy
 after_success:
   - codecov
 

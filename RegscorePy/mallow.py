@@ -23,7 +23,6 @@ def mallow(y, y_pred, y_sub, k, p):
 
     import numpy as np
     import pandas as pd
-    import wranings
 
 
     if k<p:

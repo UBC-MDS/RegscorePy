@@ -7,6 +7,9 @@ sys.path.insert(0, os.path.abspath("../"))
 
 from RegscorePy.aic import aic
 
+
+
+
 class Test_aic():
 
     # test function
@@ -96,13 +99,13 @@ class Test_aic():
         with pytest.raises(Exception):
             aic([1, 2, 3, 4], [], 2)
 
+
     def test_y_ypred_len_1(self):
         """
         test if length of y and y_pred is larger than 1, if not yield error
         """
         with pytest.raises(Exception):
             aic([1], [5], 2)
-
 
     # test type of y and y_pred
     def test_type_y1(self):

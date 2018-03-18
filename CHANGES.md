@@ -18,11 +18,3 @@ In this release:
 * Updated test files.
 * Added more documentation.
 
-V4.0, 2018/03/18 -- Fourth release
-
-In this release:
-
-* Continuous integration testing set up with Travis.
-* Passed building in Travis.
-* Improved test and function documentation. 
-

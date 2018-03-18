@@ -171,6 +171,11 @@ You also have the option to run individual test files by referencing its path. F
 ```
 python -m pytest RegscorePy/test/test_aic.py
 ```
+## Dependecies
+
+Python(v>=3.6)
+Numpy
+Pandas
 
 ## License
 [MIT](LICENSE)

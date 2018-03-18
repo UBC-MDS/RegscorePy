@@ -62,6 +62,14 @@ class Test_bic:
         with pytest.raises(TypeError):
             bic([1, 2, complex(1,2), 5], [1, 2, 3, 4], 3)
 
+
+    def test_type_y_dict(self):
+        """
+        Raise Error if elements of y or y_pred are not same lengths.
+        """
+        with pytest.raises(TypeError):
+            bic(dict(), [1, 2, 3, 4], 3)
+
     def test_len_ypred_elements(self):
         """
         Raise Error if elements of y or y_pred are not same lengths.

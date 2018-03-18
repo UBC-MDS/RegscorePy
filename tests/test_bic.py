@@ -31,14 +31,14 @@ class Test_bic:
         Raise TypeError if elements of y or y_pred are not integers.
         """
         with pytest.raises(TypeError):
-            bic(complex(3,4), [1, 2], 3.4)
+            bic(complex(3, 4), [1, 2], 3.4)
 
     def test_type_y_ypred4(self):
         """
         Raise TypeError if elements of y or y_pred are not integers.
         """
         with pytest.raises(TypeError):
-            bic([1, 2], complex(3,4), 3.4)
+            bic([1, 2], complex(3, 4), 3.4)
 
     def test_len_y_ypred(self):
         """

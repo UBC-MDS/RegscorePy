@@ -174,7 +174,9 @@ python -m pytest RegscorePy/test/test_aic.py
 ## Dependecies
 
 Python(v>=3.6)
+
 Numpy
+
 Pandas
 
 ## License

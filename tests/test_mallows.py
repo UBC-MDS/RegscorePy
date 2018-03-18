@@ -130,3 +130,20 @@ class Test_mallow:
         """
         with pytest.raises(ValueError):
             mallow([1,2,3,4],[],[5,6,7,8],3,2)
+
+    def test_type_ypred(self):
+        """
+        test if y_pred is a vector or array-like type including numbers, if not yield error
+        """
+        with pytest.raises(TypeError):
+            mallow([5, 6, 7, 8],[1,2,3,4] ["a", "b", "c", "d"], 3,2)
+
+    def test_type_ypred1(self):
+        """
+        test if y is a vector or array-like type including numbers, if not yield error
+        """
+        with pytest.raises(TypeError):
+            mallow([[5, 0, 0, 0],
+                                          [0, 6, 0, 0],
+                                          [0, 0, 7, 0],
+                                          [0, 0, 0, 8]],[1,2,3,4],[5,6,7,8],3,2)

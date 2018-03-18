@@ -31,40 +31,40 @@ def bic(y, y_pred, p):
 
     # Input type error exceptions
     if not isinstance(y, (collections.Sequence, np.ndarray, pd.core.series.Series)):
-        raise Exception("Argument 1 not like an array.")
+        raise TypeError("Argument 1 not like an array.")
 
     if not isinstance(y_pred, (collections.Sequence, np.ndarray, pd.core.series.Series)):
-        raise Exception("Argument 2 not like an array.")
+        raise TypeError("Argument 2 not like an array.")
 
     for i in y:
         if not isinstance(i, (int, float)):
-            raise Exception("All elements of argument 1 must be int or float.")
+            raise TypeError("All elements of argument 1 must be int or float.")
 
     for i in y_pred:
         if not isinstance(i, (int, float)):
-            raise Exception("All elements of argument 2 must be int or float.")
+            raise TypeError("All elements of argument 2 must be int or float.")
 
     if not isinstance(p, (int, float)):
-        raise Exception("'Number of variables' must be of type int or float.")
+        raise TypeError("'Number of variables' must be of type int or float.")
 
     if p <= 0:
-        raise Exception("'Number of variables' must be positive integer.")
+        raise TypeError("'Number of variables' must be positive integer.")
+
+    if isinstance(p, int) != True:
+        raise TypeError("Expect positive integer")
 
     if len(y) <= 1 or len(y_pred) <= 1:
-        raise Exception("observed and predicted values must be greater than 1")
+        raise TypeError("observed and predicted values must be greater than 1")
 
     # Length exception
     if not len(y) == len(y_pred):
-        raise Exception("Equal length of observed and predicted values expected.")
+        raise TypeError("Equal length of observed and predicted values expected.")
     else:
         n = len(y)
 
     # Score
-    # compute residual
+
     residual = np.subtract(y_pred, y)
-    # compute residual sum of square
     SSE = np.sum(np.power(residual, 2))
-    # fit number of observations, number of variables and sum of squared error in the BIC score formula
     BIC = n*np.log(SSE/n) + p*np.log(n)
-    # return score
     return BIC

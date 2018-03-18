@@ -98,7 +98,7 @@ class Test_aic():
 
     def test_y_ypred_len_1(self):
         """
-        test if length of y_pred is larger than 1, if not yield error
+        test if length of y and y_pred is larger than 1, if not yield error
         """
         with pytest.raises(Exception):
             aic([1], [5], 2)

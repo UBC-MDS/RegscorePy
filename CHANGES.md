@@ -18,3 +18,11 @@ In this release:
 * Updated test files.
 * Added more documentation.
 
+V4.0, 2018/03/18 -- Fourth release
+
+In this release:
+ - Continous Integration through Travis CI
+ - Increased the coverage of tests to 100%
+ - Indexed package v1 on [Pypi](https://pypi.python.org/pypi/RegscorePy/)
+ - Improved documentation
+ - [Resolved issues](https://github.com/UBC-MDS/RegscorePy/issues?q=is%3Aissue+is%3Aclosed)

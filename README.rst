@@ -1,7 +1,7 @@
 RegscorePy
 ==========
 
-|Build Status| |codecov|
+|Build Status| |codecov| |PyPi|
 
 A python package that does model comparison between different regression
 models.
@@ -12,6 +12,10 @@ Installation
 .. code:: bash
 
     pip install git+https://github.com/UBC-MDS/RegscorePy.git
+
+    #or
+
+    pip install RegscorePy
 
 **Function Description And Usage**
 ----------------------------------
@@ -199,3 +203,5 @@ contributing to the project, please refer to
    :target: https://travis-ci.org/UBC-MDS/RegscorePy
 .. |codecov| image:: https://codecov.io/gh/UBC-MDS/RegscorePy/branch/master/graphs/badge.svg
    :target: https://codecov.io/gh/UBC-MDS/RegscorePy
+.. |PyPi| image:: https://badge.fury.io/py/RegscorePy.svg
+   :target: https://pypi.python.org/pypi/RegscorePy

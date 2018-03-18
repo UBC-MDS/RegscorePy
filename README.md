@@ -1,7 +1,7 @@
 
 # RegscorePy
 
-[![Build Status](https://travis-ci.org/UBC-MDS/RegscorePy.svg?branch=master)](https://travis-ci.org/UBC-MDS/RegscorePy) [![codecov](https://codecov.io/gh/UBC-MDS/RegscorePy/branch/master/graphs/badge.svg)](https://codecov.io/gh/UBC-MDS/RegscorePy) [![PyPI version](https://badge.fury.io/py/RegscorePy.svg)](https://pypi.python.org/pypi/RegscorePy/)
+[![Build Status](https://travis-ci.org/UBC-MDS/RegscorePy.svg?branch=master)](https://travis-ci.org/UBC-MDS/RegscorePy) [![codecov](https://codecov.io/gh/UBC-MDS/RegscorePy/branch/master/graphs/badge.svg)](https://codecov.io/gh/UBC-MDS/RegscorePy) [![PyPI version](https://img.shields.io/pypi/v/RegscorePy.svg)](https://pypi.python.org/pypi/RegscorePy/)
 
 
 A python package that does model comparison between different regression models.

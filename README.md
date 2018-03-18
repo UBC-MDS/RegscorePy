@@ -173,11 +173,13 @@ python -m pytest RegscorePy/test/test_aic.py
 ```
 ## Dependecies
 
+Following versions were used to develop this package.
+
 Python(v>=3.6)
 
-Numpy
+Numpy(v>=1.13.3)
 
-Pandas
+Pandas(v>=0.20.3)
 
 ## License
 [MIT](LICENSE)

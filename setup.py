@@ -4,7 +4,7 @@ from setuptools import find_packages
 
 setup(
     name = 'RegscorePy',
-    version = '1.0',
+    version = '1.1',
     author = 'Ha Dinh, Simran Sethi, Ruoqi Xu',
     author_email = 'dinhhn.ubc@gmail.com, simran.sethi@alumni.ubc.ca, rq658182@dal.ca',
     packages = ['RegscorePy'],
@@ -12,7 +12,7 @@ setup(
     url = 'https://github.com/UBC-MDS/regscore-py',
     license = 'MIT',
     description = 'Useful score functions to assist regression model comparison',
-    long_description = open('README.md').read(),
+    long_description = open('README.rst').read(),
     install_requires = ['numpy','pandas'],
     include_package_data=True,
     download_url = 'https://github.com/UBC-MDS/RegscorePy/archive/0.1.tar.gz',

@@ -1,5 +1,6 @@
 import os
 import sys
+import numpy as np
 import pytest
 
 sys.path.insert(0, os.path.abspath("."))
@@ -147,3 +148,10 @@ class Test_mallow:
                                           [0, 6, 0, 0],
                                           [0, 0, 7, 0],
                                           [0, 0, 0, 8]],[1,2,3,4],[5,6,7,8],3,2)
+
+    def test_type_ypred2(self):
+        """
+        test if y_pred is a vector or array-like type including numbers, if not yield error
+        """
+        with pytest.raises(TypeError):
+            mallow([1, 2, 3, 4],"1234",[5,6,7,8], 5, 3)

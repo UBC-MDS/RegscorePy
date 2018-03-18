@@ -10,6 +10,10 @@ A python package that does model comparison between different regression models.
 
 ```bash
 pip install git+https://github.com/UBC-MDS/RegscorePy.git
+
+#or
+
+pip install RegscorePy
 ```
 
 
